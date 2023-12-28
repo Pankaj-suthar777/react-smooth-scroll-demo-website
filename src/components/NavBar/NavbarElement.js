@@ -8,10 +8,17 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: stickey;
   top: 0;
+  position: fixed;
 
+  ////
+  width: 100%;
   z-index: 10;
+  ////
+
+  ///
+  ///position:fixed
+  ///
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -82,6 +89,9 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
 
   &:active {
+    border-bottom: 3px solid #01bf71;
+  }
+  &:focus {
     border-bottom: 3px solid #01bf71;
   }
 `;
