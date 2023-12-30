@@ -8,7 +8,8 @@ export const SigninContainer = styled.div`
   border-radius: 5px;
 
   @media screen and (max-width: 650px) {
-    height: 65%;
+    height: 500px;
+    width: 90%;
   }
 `;
 
