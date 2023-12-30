@@ -21,6 +21,11 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { animateScroll } from "react-scroll";
+
+function scrollToTop() {
+  animateScroll.scrollToTop();
+}
 
 const Footer = () => {
   return (
@@ -63,7 +68,9 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to="/">dolla</SocialLogo>
+            <SocialLogo to="/" onClick={scrollToTop}>
+              dolla
+            </SocialLogo>
             <WebsiteRights>
               dolla &copy; {new Date().getFullYear()} All rights reserved.
             </WebsiteRights>

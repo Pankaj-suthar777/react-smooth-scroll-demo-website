@@ -14,6 +14,7 @@ import {
   ImgWrap,
   Img,
 } from "./InfoElement";
+import { useNavigate } from "react-router-dom";
 
 const InfoSection = ({
   lightBg,
@@ -32,6 +33,7 @@ const InfoSection = ({
   primary,
   lightTextDesc,
 }) => {
+  const naviagte = useNavigate();
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -44,7 +46,7 @@ const InfoSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to="home"
+                    onClick={() => naviagte("/signin")}
                     smooth={true}
                     duration={500}
                     spy={true}

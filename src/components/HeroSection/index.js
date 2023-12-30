@@ -21,7 +21,7 @@ function HeroSection() {
   }
 
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <HeroBg>
         <VideoBg autoPlay loop muted src={Video} type="video/mp4"></VideoBg>
       </HeroBg>
@@ -38,6 +38,11 @@ function HeroSection() {
             to="signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+            exact={true}
           >
             Get strated{" "}
             {hover ? <ArrowForward></ArrowForward> : <ArrowRight></ArrowRight>}

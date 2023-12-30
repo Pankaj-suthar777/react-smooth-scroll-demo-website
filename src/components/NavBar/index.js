@@ -1,5 +1,6 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
+import { animateScroll } from "react-scroll";
 
 import {
   Nav,
@@ -13,27 +14,69 @@ import {
   NavBtnLink,
 } from "./NavbarElement";
 
+function scrollToTop() {
+  animateScroll.scrollToTop();
+}
+
 const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">Rupee</NavLogo>
+          <NavLogo to="/" onClick={scrollToTop}>
+            Rupee
+          </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars></FaBars>
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-80}
+                exact={true}
+              >
+                About
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="discover">Discover</NavLinks>
+              <NavLinks
+                to="discover"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                spy={true}
+                exact={true}
+              >
+                Discover
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="services">Services</NavLinks>
+              <NavLinks
+                to="services"
+                smooth={true}
+                offset={-80}
+                duration={500}
+                spy={true}
+                exact={true}
+              >
+                Services
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="signup">Sign up</NavLinks>
+              <NavLinks
+                to="signup"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+              >
+                Sign up
+              </NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>

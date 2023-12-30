@@ -93,6 +93,7 @@ export const SocialLogo = styled(Link)`
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+  margin-right: 16px;
   font-weight: bold;
 `;
 
